@@ -7,50 +7,51 @@ import com.squareup.moshi.JsonClass
 data class WaifuImageDTO(
 
     @Json(name = "signature")
-    val signature:String,
+    val signature: String,
 
     @Json(name = "extension")
-    val extension:String,
+    val extension: String,
 
     @Json(name = "image_id")
-    val imageID:Int,
+    val imageID: Int,
 
     @Json(name = "favorites")
-    val favorites:Int,
+    val favorites: Int,
 
     @Json(name = "dominant_color")
-    val dominantColor:String,
+    val dominantColor: String,
 
     @Json(name = "source")
-    val source:String,
+    val source: String,
 
     @Json(name = "artist")
-    val artist:WaifuImageArtistDTO?,
+    val artist: WaifuImageArtistDTO?,
 
     @Json(name = "uploaded_at")
-    val uploadedAt:String,
+    val uploadedAt: String,
 
     @Json(name = "liked_at")
-    val likedAt:String?,
+    val likedAt: String?,
 
     @Json(name = "is_nsfw")
-    val isNsfw:Boolean,
+    val isNsfw: Boolean,
 
     @Json(name = "width")
-    val width:Int,
+    val width: Int,
 
     @Json(name = "height")
-    val height:Int,
+    val height: Int,
 
     @Json(name = "byte_size")
-    val byteSize:Int,
+    val byteSize: Int,
 
-    @Json(name ="url")
-    val url:String,
+    @Json(name = "url")
+    val url: String,
 
     @Json(name = "preview_url")
-    val previewUrl:String,
+    val previewUrl: String,
 
 
-
-    )
+    @Json(name = "tags")
+    val tags: List<WaifuImageTagsDTO>
+)
