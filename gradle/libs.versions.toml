@@ -5,6 +5,9 @@ activity-compose = "1.7.2"
 #   AGP Version
 agp = "8.1.0-beta02"
 
+#   Coroutine
+coroutine-version = "1.6.4"
+
 #   Kotlin Android
 org-jetbrains-kotlin-android = "1.8.10"
 
@@ -29,7 +32,7 @@ androidx-junit-version = "1.1.5"
 junit-version = "4.13.2"
 
 #   KSP
-ksp-version = "1.0.9"
+ksp-version = "1.8.10-1.0.9"
 
 #   Logging Interceptor
 logging-version = "4.11.0"
@@ -47,6 +50,10 @@ retrofit-version = "2.9.0"
 
 #   Coil
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-version" }
+
+#   Coroutine
+coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutine-version" }
+coroutine-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutine-version" }
 
 #   Compose
 activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
@@ -83,6 +90,7 @@ material3 = { group = "androidx.compose.material3", name = "material3" }
 
 #   Moshi
 moshi = { group = "com.squareup.moshi", name = "moshi", version.ref = "moshi-version" }
+moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi-version" }
 
 #   Retrofit
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit-version" }
