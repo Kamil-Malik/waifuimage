@@ -2,7 +2,8 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    alias(libs.plugins.ksp)
+    alias(libs.plugins.kapt)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -25,15 +26,24 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
+
     kotlinOptions {
         jvmTarget = "17"
     }
 }
 dependencies {
+    implementation(project(":core:common"))
     implementation(project(":core:model"))
     implementation(project(":core:remote"))
 
@@ -43,7 +53,14 @@ dependencies {
 
     //  Hilt
     implementation(libs.hilt)
-    ksp(libs.hilt.compiler)
+    kapt(libs.hilt.compiler)
+    testImplementation(libs.hilt)
+
+    //  Mock
+    testImplementation(libs.mockK)
+
+    //  Robolectric
+    testImplementation(libs.robolectric)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
