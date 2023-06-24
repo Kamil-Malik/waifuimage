@@ -11,6 +11,9 @@ coroutine-version = "1.6.4"
 #   Kotlin Android
 org-jetbrains-kotlin-android = "1.8.10"
 
+#   Kapt
+kapt-version = "1.8.10"
+
 #   KTX
 core-ktx = "1.10.1"
 
@@ -37,6 +40,9 @@ ksp-version = "1.8.10-1.0.9"
 #   Logging Interceptor
 logging-version = "4.11.0"
 
+#   MockK
+mockK-version = "1.13.5"
+
 #   Moshi
 moshi-version = "1.14.0"
 
@@ -46,8 +52,10 @@ viewmodel-version = "2.6.1"
 #   Retrofit
 retrofit-version = "2.9.0"
 
-[libraries]
+#   Robolectric
+robolectric-version = "4.9"
 
+[libraries]
 #   Coil
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-version" }
 
@@ -88,6 +96,9 @@ logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-intercep
 #   Material
 material3 = { group = "androidx.compose.material3", name = "material3" }
 
+#   MockK
+mockK = { group = "io.mockk", name = "mockk", version.ref = "mockK-version" }
+
 #   Moshi
 moshi = { group = "com.squareup.moshi", name = "moshi", version.ref = "moshi-version" }
 moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi-version" }
@@ -95,19 +106,25 @@ moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", v
 #   Retrofit
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit-version" }
 
+#   Robolectric
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric-version" }
+
 #   Viewmodel
 viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewmodel-version" }
 viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "viewmodel-version" }
 
-
-
 [plugins]
-
 #   Android Application
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 
 #   Android Module
 com-android-library = { id = "com.android.library", version.ref = "agp" }
+
+#   Dagger Hilt
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt-version" }
+
+#   Kapt
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kapt-version" }
 
 #   Kotlin Android
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
