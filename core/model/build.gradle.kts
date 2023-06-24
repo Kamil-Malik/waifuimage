@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.lelestacia.waifuimage.core.data"
+    namespace = "com.lelestacia.waifuimage.core.model"
     compileSdk = 33
 
     defaultConfig {
@@ -31,4 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+dependencies {
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.espresso.core)
 }
