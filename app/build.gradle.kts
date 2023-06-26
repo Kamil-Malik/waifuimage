@@ -54,6 +54,7 @@ android {
 
 dependencies {
 
+    implementation(project(":core:common"))
     implementation(project(":core:model"))
     implementation(project(":core:theme"))
     implementation(project(":feature:waifu"))
@@ -65,6 +66,10 @@ dependencies {
     //  Hilt
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
+    implementation(libs.hilt.compose)
+
+    //  Accompanist
+    implementation(libs.accompanist.animated.navigation)
 
     implementation(libs.core.ktx)
     implementation(libs.activity.compose)
