@@ -22,7 +22,7 @@ data class WaifuImageDTO(
     val dominantColor: String,
 
     @Json(name = "source")
-    val source: String,
+    val source: String?,
 
     @Json(name = "artist")
     val artist: WaifuImageArtistDTO?,

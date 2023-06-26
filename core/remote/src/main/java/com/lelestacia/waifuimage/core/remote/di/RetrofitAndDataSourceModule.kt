@@ -9,6 +9,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
 @Module
@@ -23,6 +24,7 @@ object RetrofitAndDataSourceModule {
         Retrofit.Builder()
             .baseUrl(WaifuImageEndpoint.BASE_URL)
             .client(okHttpClient)
+            .addConverterFactory(MoshiConverterFactory.create())
             .validateEagerly(true)
             .build()
             .create(WaifuImageEndpoint::class.java)

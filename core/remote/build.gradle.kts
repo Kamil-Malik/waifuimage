@@ -48,6 +48,7 @@ dependencies {
     kapt(libs.hilt.compiler)
 
     implementation(libs.retrofit)
+    implementation(libs.retrofit.moshi)
     implementation(libs.moshi)
     ksp(libs.moshi.codegen)
 

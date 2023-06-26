@@ -6,7 +6,7 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class WaifuImageArtistDTO(
 
-    @Json(name = "artis_id")
+    @Json(name = "artist_id")
     val artistID:Int,
 
     @Json(name = "name")

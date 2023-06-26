@@ -1,4 +1,7 @@
 [versions]
+#   Accompanist
+accompanist-version = "0.31.4-beta"
+
 #   Activity Compose
 activity-compose = "1.7.2"
 
@@ -56,6 +59,10 @@ retrofit-version = "2.9.0"
 robolectric-version = "4.9"
 
 [libraries]
+#   Accompanist
+accompanist-animated-navigation = { group = "com.google.accompanist", name = "accompanist-navigation-animation", version.ref = "accompanist-version" }
+accompanist-permission = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist-version" }
+
 #   Coil
 coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil-version" }
 
@@ -105,6 +112,7 @@ moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", v
 
 #   Retrofit
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit-version" }
+retrofit-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit-version" }
 
 #   Robolectric
 robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric-version" }

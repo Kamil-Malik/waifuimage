@@ -12,7 +12,7 @@ data class WaifuImage(
 
     val dominantColor: String,
 
-    val source: String,
+    val source: String?,
 
     val artist: WaifuImageArtist?,
 
