@@ -45,6 +45,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:common"))
     implementation(project(":core:domain"))
     implementation(project(":core:model"))
     implementation(project(":core:theme"))
@@ -53,6 +54,7 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.ui)
     implementation(libs.ui.graphics)
+    implementation(libs.ui.material.icon.extended)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
 
@@ -72,6 +74,8 @@ dependencies {
     //  Hilt
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
+
+    implementation(libs.viewmodel)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

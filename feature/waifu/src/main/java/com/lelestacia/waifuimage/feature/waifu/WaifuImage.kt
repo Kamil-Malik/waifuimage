@@ -1,5 +1,6 @@
 package com.lelestacia.waifuimage.feature.waifu
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Surface
@@ -17,10 +18,13 @@ import com.lelestacia.waifuimage.core.theme.WaifuImageTheme
 
 @Composable
 fun WaifuImageView(
-    waifu: WaifuImage
+    waifu: WaifuImage,
+    onWaifuClicked: (WaifuImage) -> Unit
 ) {
     val context = LocalContext.current
-    Surface {
+    Surface(
+        modifier = Modifier.clickable { onWaifuClicked(waifu) }
+    ) {
         AsyncImage(
             model = ImageRequest.Builder(context)
                 .data(waifu.url)
@@ -80,6 +84,9 @@ fun PreviewWaifuImage() {
         )
     )
     WaifuImageTheme {
-        WaifuImageView(waifu)
+        WaifuImageView(
+            waifu = waifu,
+            onWaifuClicked = {}
+        )
     }
 }
